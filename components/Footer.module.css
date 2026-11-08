@@ -1,0 +1,64 @@
+.footer {
+  background-color: var(--secondary);
+  color: #f4f4f5;
+  padding: 5rem 0 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
+  margin-bottom: 4rem;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 1.5rem;
+}
+
+.logo span {
+  color: var(--primary);
+}
+
+.desc {
+  color: #a0a0a0;
+  line-height: 1.6;
+}
+
+.col h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  color: #fff;
+}
+
+.col ul {
+  list-style: none;
+}
+
+.col ul li {
+  margin-bottom: 0.75rem;
+}
+
+.col a {
+  color: #a0a0a0;
+  transition: color 0.3s ease;
+}
+
+.col a:hover {
+  color: var(--primary);
+}
+
+.col p {
+  color: #a0a0a0;
+  margin-bottom: 0.75rem;
+}
+
+.bottom {
+  text-align: center;
+  padding: 2rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: #888;
+  font-size: 0.9rem;
+}

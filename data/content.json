@@ -1,0 +1,66 @@
+{
+  "hero": {
+    "title1": "Discover extraordinary",
+    "title2": "homes",
+    "title3": "worldwide",
+    "subtitle": "Explore exclusive luxury villas, penthouses, and unparalleled experiences with LuxeBnB."
+  },
+  "categories": [
+    {
+      "id": "c1",
+      "name": "Beachfront",
+      "icon": "Umbrella"
+    },
+    {
+      "id": "c2",
+      "name": "Cabins",
+      "icon": "TreePine"
+    },
+    {
+      "id": "c3",
+      "name": "Trending",
+      "icon": "Flame"
+    },
+    {
+      "id": "c4",
+      "name": "Mansions",
+      "icon": "Castle"
+    },
+    {
+      "id": "c5",
+      "name": "Ski Chalets",
+      "icon": "Snowflake"
+    },
+    {
+      "id": "c6",
+      "name": "Islands",
+      "icon": "Palmtree"
+    }
+  ],
+  "services": [
+    {
+      "id": "s1",
+      "title": "Private Chef",
+      "description": "World-class culinary experiences tailored to your tastes, right in your villa.",
+      "icon": "Utensils"
+    },
+    {
+      "id": "s2",
+      "title": "Chauffeur Service",
+      "description": "Premium transportation with luxury vehicles and professional drivers.",
+      "icon": "Car"
+    },
+    {
+      "id": "s3",
+      "title": "Spa & Wellness",
+      "description": "In-house massage and spa treatments for ultimate relaxation.",
+      "icon": "Sparkles"
+    },
+    {
+      "id": "s4",
+      "title": "Yacht Charter",
+      "description": "Explore the coastline with our fleet of luxury private yachts.",
+      "icon": "Sailboat"
+    }
+  ]
+}

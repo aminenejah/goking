@@ -1,0 +1,218 @@
+.section {
+  padding: 2rem 0 8rem;
+  background-color: var(--background);
+}
+
+/* ── Toolbar ── */
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.25rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.resultCount {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-muted);
+}
+
+.mapToggle {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 1rem;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.mapToggle:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.mapToggleActive {
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+}
+
+.mapToggleActive:hover {
+  background: var(--primary-hover);
+  color: #fff;
+}
+
+/* ── Grid ── */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  row-gap: 2.5rem;
+}
+
+/* ── Split layout (with map) ── */
+
+.splitLayout {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 2rem;
+  align-items: start;
+}
+
+.splitLayout .grid {
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+}
+
+.mapPanel {
+  position: sticky;
+  top: 100px;
+  height: calc(100vh - 140px);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+/* ── Skeleton ── */
+
+.skeleton {
+  height: 300px;
+  border-radius: 16px;
+  background: linear-gradient(110deg, #f0f0f0 25%, #fafafa 37%, #f0f0f0 63%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* ── Empty state ── */
+
+.emptyState {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: var(--color-muted);
+}
+
+.emptyEmoji {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.emptyState h3 {
+  font-size: 1.25rem;
+  color: var(--color-text);
+  margin-bottom: 0.5rem;
+}
+
+/* ── Card (legacy, kept for compat) ── */
+
+.card {
+  background: transparent;
+  border-radius: 0;
+  overflow: visible;
+  box-shadow: none;
+  border: none;
+  cursor: pointer;
+}
+
+.imageWrapper {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 12px;
+  margin-bottom: 0.75rem;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.heartBtn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heartBtn:hover {
+  transform: scale(1.1);
+}
+
+.content {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.titleRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.1rem;
+}
+
+.titleRow h3 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #222;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.9rem;
+  color: #222;
+}
+
+.host,
+.date {
+  color: #717171;
+  font-size: 0.9rem;
+}
+
+.price {
+  margin-top: 0.25rem;
+  color: #222;
+  font-size: 0.95rem;
+}
+
+.priceAmount {
+  font-weight: 600;
+}
+
+/* ── Responsive ── */
+
+@media (max-width: 1024px) {
+  .splitLayout {
+    grid-template-columns: 1fr;
+  }
+
+  .mapPanel {
+    position: relative;
+    top: 0;
+    height: 400px;
+    order: -1;
+  }
+}

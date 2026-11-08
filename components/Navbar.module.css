@@ -1,0 +1,271 @@
+/* Navbar.module.css - uses the theme variables from globals.css */
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    background: color-mix(in srgb, var(--background) 88%, transparent);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid color-mix(in srgb, var(--foreground) 10%, transparent);
+    transition: box-shadow 0.25s ease, background 0.25s ease;
+}
+
+.scrolled {
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+}
+
+.container,
+.inner,
+.navContent {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    height: 76px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+
+.logo,
+.brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 1.35rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    color: var(--foreground);
+    flex-shrink: 0;
+}
+
+.logoImage,
+.logoImg {
+    height: 36px;
+    width: auto;
+    display: block;
+}
+
+.logoText {
+    color: var(--foreground);
+}
+
+.logoAccent {
+    color: var(--primary);
+}
+
+.navLinks,
+.links,
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    list-style: none;
+}
+
+.navLink,
+.link {
+    position: relative;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--foreground);
+    padding: 0.4rem 0;
+    transition: color 0.2s ease;
+}
+
+.navLink::after,
+.link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background: var(--primary);
+    transition: width 0.25s ease;
+}
+
+.navLink:hover,
+.link:hover {
+    color: var(--primary-dark);
+}
+
+.navLink:hover::after,
+.link:hover::after,
+.active::after {
+    width: 100%;
+}
+
+.active {
+    color: var(--primary-dark);
+}
+
+.actions,
+.navActions,
+.right {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.langSwitch,
+.languageSwitcher,
+.langSelect {
+    background: var(--secondary);
+    color: var(--foreground);
+    border: none;
+    border-radius: 10px;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.langSwitch:hover,
+.languageSwitcher:hover,
+.langSelect:hover {
+    background: var(--secondary-hover);
+}
+
+.iconButton,
+.themeToggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    color: var(--foreground);
+    border: 1px solid color-mix(in srgb, var(--foreground) 14%, transparent);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.iconButton:hover,
+.themeToggle:hover {
+    background: var(--secondary);
+    border-color: var(--primary);
+}
+
+.ctaButton,
+.cta,
+.loginBtn,
+.adminBtn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    padding: 0.65rem 1.25rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.ctaButton:hover,
+.cta:hover,
+.loginBtn:hover,
+.adminBtn:hover {
+    background: var(--primary-hover);
+    transform: translateY(-1px);
+}
+
+.navLink:focus-visible,
+.link:focus-visible,
+.logo:focus-visible,
+.brand:focus-visible,
+.iconButton:focus-visible,
+.themeToggle:focus-visible,
+.langSwitch:focus-visible,
+.ctaButton:focus-visible,
+.cta:focus-visible,
+.menuButton:focus-visible,
+.mobileToggle:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 3px;
+}
+
+.menuButton,
+.mobileToggle,
+.hamburger {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    background: transparent;
+    color: var(--foreground);
+    border: 1px solid color-mix(in srgb, var(--foreground) 14%, transparent);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.mobileMenu {
+    display: none;
+    flex-direction: column;
+    gap: 0.25rem;
+    padding: 1rem 2rem 1.5rem;
+    background: var(--background);
+    border-top: 1px solid color-mix(in srgb, var(--foreground) 10%, transparent);
+}
+
+.mobileMenu .navLink,
+.mobileMenu .link {
+    padding: 0.85rem 0;
+    font-size: 1.05rem;
+    border-bottom: 1px solid color-mix(in srgb, var(--foreground) 8%, transparent);
+}
+
+.mobileMenu .navLink::after,
+.mobileMenu .link::after {
+    display: none;
+}
+
+.open {
+    display: flex;
+}
+
+@media (max-width: 900px) {
+
+    .container,
+    .inner,
+    .navContent {
+        padding: 0 1.25rem;
+        height: 66px;
+    }
+
+    .navLinks,
+    .links,
+    .menu {
+        display: none;
+    }
+
+    .menuButton,
+    .mobileToggle,
+    .hamburger {
+        display: inline-flex;
+    }
+
+    .mobileMenu.open {
+        display: flex;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .navbar,
+    .navLink,
+    .link,
+    .navLink::after,
+    .link::after,
+    .ctaButton,
+    .cta {
+        transition: none;
+    }
+}

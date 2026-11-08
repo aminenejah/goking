@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "client": "Sarah Connor",
+    "property": "Lake Como Villa",
+    "rating": 5,
+    "date": "Oct 18, 2026",
+    "comment": "Absolutely breathtaking! The views were spectacular, and the service was impeccable. We will definitely be booking through Go King again.",
+    "status": "Approved"
+  },
+  {
+    "id": 2,
+    "client": "James Wilson",
+    "property": "Dubai Penthouse",
+    "rating": 4,
+    "date": "Oct 15, 2026",
+    "comment": "Great location and very clean. The only minor issue was that check-in took a bit longer than expected, but the host was very polite.",
+    "status": "Approved"
+  },
+  {
+    "id": 3,
+    "client": "Emma Watson",
+    "property": "Seaside Estate",
+    "rating": 5,
+    "date": "Oct 12, 2026",
+    "comment": "A slice of paradise! The private beach access made our family vacation perfect. The amenities were top-notch.",
+    "status": "Approved"
+  }
+]

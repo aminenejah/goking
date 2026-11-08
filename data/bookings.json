@@ -1,0 +1,27 @@
+[
+  {
+    "id": 101,
+    "propertyId": 1,
+    "propertyTitle": "Lake Como Villa",
+    "guestName": "Sarah Connor",
+    "guestEmail": "sarah@example.com",
+    "checkIn": "2026-10-12",
+    "checkOut": "2026-10-18",
+    "amount": "$12,400",
+    "status": "Confirmed",
+    "createdAt": "2026-05-18T10:00:00Z"
+  },
+  {
+    "id": 102,
+    "propertyId": 2,
+    "propertyTitle": "Dubai Penthouse",
+    "guestName": "James Wilson",
+    "guestEmail": "james@example.com",
+    "checkIn": "2026-11-01",
+    "checkOut": "2026-11-05",
+    "amount": "$8,200",
+    "status": "Finished",
+    "site": "xeb",
+    "createdAt": "2026-05-19T14:30:00Z"
+  }
+]

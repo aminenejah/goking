@@ -1,0 +1,78 @@
+.section {
+  padding: 8rem 0;
+  background-color: var(--background);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.header h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.header h2 span {
+  color: var(--primary);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 3rem;
+}
+
+.card {
+  text-align: center;
+  padding: 3rem 2rem;
+  border-radius: 12px;
+  background: var(--background);
+  border: 1px solid var(--accent);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+@media (prefers-color-scheme: dark) {
+  .card {
+    background: var(--secondary);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05);
+}
+
+@media (prefers-color-scheme: dark) {
+  .card:hover {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.icon {
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(203, 168, 113, 0.1);
+  padding: 1.5rem;
+  border-radius: 50%;
+}
+
+.card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.card p {
+  color: #666;
+  line-height: 1.6;
+}
+
+@media (prefers-color-scheme: dark) {
+  .card p {
+    color: #a0a0a0;
+  }
+}
